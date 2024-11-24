@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #FFC107;
+  --primary-dark: #FFA000;
+  --secondary: #2B2B2B;
+  --text: #333333;
+  --background: #FFFFFF;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  direction: rtl;
+}
+
+.hero-carousel {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.service-card {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card {
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.stats-container {
+  background: linear-gradient(rgba(255, 193, 7, 0.1), rgba(255, 193, 7, 0.2));
+}
